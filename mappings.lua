@@ -18,6 +18,14 @@ return {
     -- tables with the `name` key will be registered with which-key if it's installed
     -- this is useful for naming menus
     ["<leader>b"] = { name = "Buffers" },
+
+    ["<F2>"] = { "<cmd>terminal python3 %<cr>" },
+    ["<leader><F2>"] = { "<cmd>!git add .<cr>", desc = "Git add ." },
+    ["<leader><F3>"] = {
+        "<cmd>lua require('user.commit').commit()<cr>",
+        desc = "Git commit"
+    },
+    ["<leader><F4>"] = { "<cmd>!git push<cr>", desc = "Git push" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
   },
@@ -26,3 +34,4 @@ return {
     -- ["<esc>"] = false,
   },
 }
+
